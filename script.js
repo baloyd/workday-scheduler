@@ -27,13 +27,15 @@ three = moment("3 PM" , "H A")
 four = moment("4 PM" , "H A")
 five= moment("5 PM" , "H A")
 
-if (nine.isBefore(moment("H A", "hour"))) {
-    $('div.col-10.planner.nine').addClass("past")
-}else if (nine.isAfter(moment("H A", "hour"))) {
-    $('div.col-10.planner.nine').addClass("future")
-}else {$('div.col-10.planner.nine').addClass("present")}
+if (nine.isBefore(moment())) {
+    $('.nine').addClass("past")
+}else if (nine.isAfter(moment())) {
+    $('.nine').addClass("future")
+}else {$('.nine').addClass("present")}
 
 
+
+console.log(nine.format("H A"))
 //created on click event for savebutton
 saveBtn.on('click', function(){
     localStorage.setItem("test", planner);
