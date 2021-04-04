@@ -27,6 +27,12 @@ three = moment("3 PM" , "H A")
 four = moment("4 PM" , "H A")
 five= moment("5 PM" , "H A")
 
+
+//hours combined into an object
+var hours = ['.nine','.ten','.eleven','.twelve','.one','.two','.three','.four','.five']
+
+
+
 if (nine.isBefore(moment())) {
     $('.nine').addClass("past")
 }else if (nine.isAfter(moment())) {
@@ -34,13 +40,58 @@ if (nine.isBefore(moment())) {
 }else {$('.nine').addClass("present")}
 
 
+if (ten.isBefore(moment())) {
+    $('.ten').addClass("past")
+}else if (ten.isAfter(moment())) {
+    $('.ten').addClass("future")
+}else {$('.ten').addClass("present")}
 
-console.log(nine.format("H A"))
-//created on click event for savebutton
+if (eleven.isBefore(moment())) {
+    $('.eleven').addClass("past")
+}else if (eleven.isAfter(moment())) {
+    $('.eleven').addClass("future")
+}else {$('.eleven').addClass("present")}
+
+if (twelve.isBefore(moment())) {
+    $('.twelve').addClass("past")
+}else if (twelve.isAfter(moment())) {
+    $('.twelve').addClass("future")
+}else {$('.twelve').addClass("present")}
+
+if (one.isBefore(moment())) {
+    $('.one').addClass("past")
+}else if (one.isAfter(moment())) {
+    $('.one').addClass("future")
+}else {$('.one').addClass("present")}
+
+if (two.isBefore(moment())) {
+    $('.two').addClass("past")
+}else if (two.isAfter(moment())) {
+    $('.two').addClass("future")
+}else {$('.two').addClass("present")}
+
+if (three.isBefore(moment())) {
+    $('.three').addClass("past")
+}else if (three.isAfter(moment())) {
+    $('.three').addClass("future")
+}else {$('.three').addClass("present")}
+
+if (four.isBefore(moment())) {
+    $('.four').addClass("past")
+}else if (four.isAfter(moment())) {
+    $('.four').addClass("future")
+}else {$('.four').addClass("present")}
+
+if (five.isBefore(moment())) {
+    $('.five').addClass("past")
+}else if (five.isAfter(moment())) {
+    $('.five').addClass("future")
+}else {$('.five').addClass("present")}
+
+//created on click event for savebutton, save to local storage and alert what has been saved.
 saveBtn.on('click', function(){
     localStorage.setItem("test", planner);
     
     alert(localStorage.getItem("test"));
 });
 
-	
