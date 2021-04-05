@@ -88,9 +88,18 @@ $('.saveBtn').click( function(event){
 
     var dataNum= event.target.dataset.number
     var myText = document.getElementById(dataNum).value
-   
-    localStorage.setItem('myText', myText);
-    localStorage.getItem('myText')
-   
+  
+    localStorage.setItem("myText", myText);
+   var savedText = localStorage.getItem("myText");
+  
 });
 
+$("#nine .form-control").val(localStorage.getItem("myText"));
+$("#ten .form-control").val(localStorage.getItem("myText"));
+$("#eleven .form-control").val(localStorage.getItem("myText"));
+$("#twelve .form-control").val(localStorage.getItem("myText"));
+$("#one .form-control").val(localStorage.getItem("myText"));
+$("#two .form-control").val(localStorage.getItem("myText"));
+$("#three .form-control").val(localStorage.getItem("myText"));
+$("#four .form-control").val(localStorage.getItem("myText"));
+$("#five .form-control").val(localStorage.getItem("myText"));
