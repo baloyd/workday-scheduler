@@ -2,7 +2,6 @@
 //variables created from html classes
 var currentDay = $("#currentDay")
 var saveBtn = $(".saveBtn")
-var planner = $('input[name="planner"]').val();
 var nine = $("#nine");
 var ten = $("#ten");
 var eleven = $("#eleven")
@@ -26,10 +25,6 @@ two= moment("2 PM" , "H A")
 three = moment("3 PM" , "H A")
 four = moment("4 PM" , "H A")
 five= moment("5 PM" , "H A")
-
-
-//hours combined into an object
-var hours = ['.nine','.ten','.eleven','.twelve','.one','.two','.three','.four','.five']
 
 
 
@@ -89,9 +84,14 @@ if (five.isBefore(moment())) {
 }else {$('.five').addClass("present")}
 
 //created on click event for savebutton, save to local storage and alert what has been saved.
-saveBtn.on('click', function(){
-    localStorage.setItem("test", planner);
+$('.saveBtn').click( function(event){
     
-    alert(localStorage.getItem("test"));
+    var planner = $(this).siblings('.planner').val();
+    var time = $(this).closest().attr("id");
+    localStorage.setItem('planner', planner);
+    localStorage.setItem('time', time);
+    localStorage.getItem('planner');
+    localStorage.getItem('time');
+    alert(localStorage.getItem('planner'))
 });
 
