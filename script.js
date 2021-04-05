@@ -86,13 +86,11 @@ if (five.isBefore(moment())) {
 //created on click event for savebutton, save to local storage and alert what has been saved.
 $('.saveBtn').click( function(event){
 
-   
     var dataNum= event.target.dataset.number
-
-    var planner = $(dataNum).closest('.planner').val();
+    var myText = document.getElementById(dataNum).value
    
-    localStorage.setItem('planner', planner);
-   console.log(localStorage.getItem('planner'))
+    localStorage.setItem('myText', myText);
+    localStorage.getItem('myText')
    
 });
 
