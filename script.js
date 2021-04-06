@@ -2,15 +2,7 @@
 //variables created from html classes
 var currentDay = $("#currentDay")
 var saveBtn = $(".saveBtn")
-var nine = $("#nine");
-var ten = $("#ten");
-var eleven = $("#eleven")
-var twelve = $("#twelve");
-var one = $("#one");
-var two = $("#two");
-var three = $("#three");
-var four = $("#four");
-var five = $("#five");
+
 
 //makes current day be displayed at the top of the screen in the appropriate format
 $(currentDay).text(moment().format("dddd, MMMM Do"));
@@ -89,21 +81,19 @@ $('.saveBtn').click( function(event){
     var dataNum= event.target.dataset.number
     var myText = document.getElementById(dataNum).value
   
-    localStorage.setItem("myText",myText);
-  
+    localStorage.setItem(dataNum,myText);
+    var savedText = localStorage.getItem(dataNum,myText);
   
 });
 
 //places the corresponding information from local Storage in the input
-var savedText = localStorage.getItem("myText");
-console.log(savedText);
 
-$("#nine .form-control").val(savedText);
-$("#ten .form-control").val(savedText);
-$("#eleven .form-control").val(savedText);
-$("#twelve .form-control").val(savedText);
-$("#one .form-control").val(savedText);
-$("#two .form-control").val(savedText);
-$("#three .form-control").val(savedText);
-$("#four .form-control").val(savedText);
-$("#five .form-control").val(savedText);
+$("#nine").val(localStorage.getItem("nine"));
+$("#ten").val(localStorage.getItem("ten"));
+$("#eleven").val(localStorage.getItem("eleven"));
+$("#twelve").val(localStorage.getItem("twelve"));
+$("#one").val(localStorage.getItem("one"));
+$("#two").val(localStorage.getItem("two"));
+$("#three").val(localStorage.getItem("three"));
+$("#four").val(localStorage.getItem("four"));
+$("#five").val(localStorage.getItem("five"));
