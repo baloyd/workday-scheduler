@@ -24,7 +24,7 @@ five= moment("5 PM" , "H A")
 
 if (nine.isBefore(moment().hour())) {
     $('.nine').addClass("past")
-}else if (nine.isAfter(moment().hour())) {
+}else if (nine.isAfter(moment())) {
     $('.nine').addClass("future")
 }else {$('.nine').addClass("present")}
 
