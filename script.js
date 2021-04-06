@@ -20,60 +20,60 @@ five= moment("5 PM" , "H A")
 
 //if else statements that determine if a specific time is before,after or is currently the time, a specific class is added.
 
-
-
-if (nine.isBefore(moment().hour())) {
+var currentHour = parseInt(moment().format("H"));
+console.log(currentHour)
+if (9 < currentHour) {
     $('.nine').addClass("past")
-}else if (nine.isAfter(moment())) {
+}else if (9 > currentHour) {
     $('.nine').addClass("future")
 }else {$('.nine').addClass("present")}
 
 
-if (ten.isBefore(moment().hour())) {
+if (10 < currentHour) {
     $('.ten').addClass("past")
-}else if (ten.isAfter(moment())) {
+}else if (10 > currentHour) {
     $('.ten').addClass("future")
 }else {$('.ten').addClass("present")}
 
-if (eleven.isBefore(moment().hour())) {
+if (11 < currentHour) {
     $('.eleven').addClass("past")
-}else if (eleven.isAfter(moment())) {
+}else if (11 > currentHour) {
     $('.eleven').addClass("future")
 }else {$('.eleven').addClass("present")}
 
-if (twelve.isBefore(moment().hour())) {
+if (12 < currentHour) {
     $('.twelve').addClass("past")
-}else if (twelve.isAfter(moment())){
+}else if (12 > currentHour){
     $('.twelve').addClass("future")
 }else {$('.twelve').addClass("present")}
 
-if (one.isBefore(moment().hour())) {
+if (13 < currentHour) {
     $('.one').addClass("past")
-}else if (one.isAfter(moment())){
+}else if (13 > currentHour){
     $('.one').addClass("future")
 }else {$('.one').addClass("present")}
 
-if (two.isBefore(moment().hour())){
+if (14 < currentHour){
     $('.two').addClass("past")
-}else if (two.isAfter(moment())) {
+}else if (14 > currentHour) {
     $('.two').addClass("future")
 }else {$('.two').addClass("present")}
 
-if (three.isBefore(moment().hour())) {
+if (15 < currentHour) {
     $('.three').addClass("past")
-}else if (three.isAfter(moment())) {
+}else if (15 > currentHour) {
     $('.three').addClass("future")
 }else {$('.three').addClass("present")}
 
-if (four.isBefore(moment().hour())) {
+if (16 < currentHour) {
     $('.four').addClass("past")
-}else if (four.isAfter(moment())) {
+}else if (16 > currentHour) {
     $('.four').addClass("future")
 }else {$('.four').addClass("present")}
 
-if (five.isBefore(moment().hour())) {
+if (17 < currentHour) {
     $('.five').addClass("past")
-}else if (five.isAfter(moment())) { 
+}else if (17 > currentHour) { 
     $('.five').addClass("future")
 }else {$('.five').addClass("present")}
 
