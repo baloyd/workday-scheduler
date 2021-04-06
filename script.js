@@ -26,7 +26,7 @@ three = moment("3 PM" , "H A")
 four = moment("4 PM" , "H A")
 five= moment("5 PM" , "H A")
 
-
+//if else statements that determine if a specific time is before,after or is currently the time, a specific class is added.
 
 if (nine.isBefore(moment())) {
     $('.nine').addClass("past")
@@ -49,13 +49,13 @@ if (eleven.isBefore(moment())) {
 
 if (twelve.isBefore(moment())) {
     $('.twelve').addClass("past")
-}else if (twelve.isAfter(moment())) {
+}else if (twelve.isAfter(moment())){
     $('.twelve').addClass("future")
 }else {$('.twelve').addClass("present")}
 
 if (one.isBefore(moment())) {
     $('.one').addClass("past")
-}else if (one.isAfter(moment())) {
+}else if (one.isAfter(moment())){
     $('.one').addClass("future")
 }else {$('.one').addClass("present")}
 
@@ -79,27 +79,31 @@ if (four.isBefore(moment())) {
 
 if (five.isBefore(moment())) {
     $('.five').addClass("past")
-}else if (five.isAfter(moment())) {
+}else if (five.isAfter(moment())) { 
     $('.five').addClass("future")
 }else {$('.five').addClass("present")}
 
-//created on click event for savebutton, save to local storage and alert what has been saved.
+//created on click event for savebutton, save to local storage.
 $('.saveBtn').click( function(event){
 
     var dataNum= event.target.dataset.number
     var myText = document.getElementById(dataNum).value
   
-    localStorage.setItem("myText", myText);
-   var savedText = localStorage.getItem("myText");
+    localStorage.setItem("myText",myText);
+  
   
 });
 
-$("#nine .form-control").val(localStorage.getItem("myText"));
-$("#ten .form-control").val(localStorage.getItem("myText"));
-$("#eleven .form-control").val(localStorage.getItem("myText"));
-$("#twelve .form-control").val(localStorage.getItem("myText"));
-$("#one .form-control").val(localStorage.getItem("myText"));
-$("#two .form-control").val(localStorage.getItem("myText"));
-$("#three .form-control").val(localStorage.getItem("myText"));
-$("#four .form-control").val(localStorage.getItem("myText"));
-$("#five .form-control").val(localStorage.getItem("myText"));
+//places the corresponding information from local Storage in the input
+var savedText = localStorage.getItem("myText");
+console.log(savedText);
+
+$("#nine .form-control").val(savedText);
+$("#ten .form-control").val(savedText);
+$("#eleven .form-control").val(savedText);
+$("#twelve .form-control").val(savedText);
+$("#one .form-control").val(savedText);
+$("#two .form-control").val(savedText);
+$("#three .form-control").val(savedText);
+$("#four .form-control").val(savedText);
+$("#five .form-control").val(savedText);
