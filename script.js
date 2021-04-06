@@ -31,49 +31,49 @@ if (nine.isBefore(moment().hour())) {
 
 if (ten.isBefore(moment().hour())) {
     $('.ten').addClass("past")
-}else if (ten.isAfter(moment().hour())) {
+}else if (ten.isAfter(moment())) {
     $('.ten').addClass("future")
 }else {$('.ten').addClass("present")}
 
 if (eleven.isBefore(moment().hour())) {
     $('.eleven').addClass("past")
-}else if (eleven.isAfter(moment().hour())) {
+}else if (eleven.isAfter(moment())) {
     $('.eleven').addClass("future")
 }else {$('.eleven').addClass("present")}
 
 if (twelve.isBefore(moment().hour())) {
     $('.twelve').addClass("past")
-}else if (twelve.isAfter(moment().hour())){
+}else if (twelve.isAfter(moment())){
     $('.twelve').addClass("future")
 }else {$('.twelve').addClass("present")}
 
 if (one.isBefore(moment().hour())) {
     $('.one').addClass("past")
-}else if (one.isAfter(moment().hour())){
+}else if (one.isAfter(moment())){
     $('.one').addClass("future")
 }else {$('.one').addClass("present")}
 
 if (two.isBefore(moment().hour())){
     $('.two').addClass("past")
-}else if (two.isAfter(moment().hour())) {
+}else if (two.isAfter(moment())) {
     $('.two').addClass("future")
 }else {$('.two').addClass("present")}
 
 if (three.isBefore(moment().hour())) {
     $('.three').addClass("past")
-}else if (three.isAfter(moment().hour())) {
+}else if (three.isAfter(moment())) {
     $('.three').addClass("future")
 }else {$('.three').addClass("present")}
 
 if (four.isBefore(moment().hour())) {
     $('.four').addClass("past")
-}else if (four.isAfter(moment().hour())) {
+}else if (four.isAfter(moment())) {
     $('.four').addClass("future")
 }else {$('.four').addClass("present")}
 
 if (five.isBefore(moment().hour())) {
     $('.five').addClass("past")
-}else if (five.isAfter(moment().hour())) { 
+}else if (five.isAfter(moment())) { 
     $('.five').addClass("future")
 }else {$('.five').addClass("present")}
 
